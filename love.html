@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>あなたのことが好きだ</title>
+        <style>
+        body {
+            color: #ea7a8c;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 50px;
+            font-size: 40px;
+            line-height: 3.5;
+        }
+        .blur[aria-expanded="false"] {
+            filter:blur(10px);
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+        }
+        p {
+            font-size: 50px;
+        }
+        h1 {
+            color:black;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>🤫 点一下试试？</h1>
+        <h2 class="blur" aria-expanded="false">あなたが大好きだ &#128571</h2>
+        <ul>
+            <li class="blur" aria-expanded="false">&#128151ずっと前から好きでした</li>
+            <li class="blur" aria-expanded="false">&#128151いつもあなたのことで頭がいっぱいです</li>
+            <li class="blur" aria-expanded="false">&#128151あなたと一緒に豚カツを食べたい</li>
+            <li class="blur" aria-expanded="false">&#128151あなたと一緒に紅茶を飲みたい</li>
+            <li class="blur" aria-expanded="false">&#128151あなたと一緒に公園に行きたい</li>
+            <li class="blur" aria-expanded="false">&#128151あなたと一緒に猫を探したい</li>  
+        </ul>
+        <p class="blur" aria-expanded="false">今夜は月が綺麗ですね&#127769</p> 
+        <script>
+            document.querySelectorAll('.blur').forEach(item => {
+                item.onclick = function() {
+                    this.setAttribute('aria-expanded','true');
+                }
+            });
+        </script>
+    </body>
+</html>
